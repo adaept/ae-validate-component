@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+
+  <script type="module" src="/build/aevalidatecomponent.esm.js"></script>
+  <script nomodule src="/build/aevalidatecomponent.js"></script>
+
+</head>
+
+<body>
+  <ae-validate-component></ae-validate-component>
+
+</body>
+<script>
+  var comp = document.querySelector('ae-validate-component');
+  console.log('comp', comp.validator);
+  let validator = [{
+    name: 'length',
+    options: {
+      min: 6
+    }
+  }, 'fruit'];
+  comp.validator = validator;
+</script>
+
+</html>

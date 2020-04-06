@@ -1,0 +1,57 @@
+{
+  "name": "ae-validate-component",
+  "version": "0.0.1",
+  "description": "adaept validate component",
+  "main": "dist/aevalidatecomponent.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "browser": "dist/aevalidatecomponent.js",
+  "scripts": {
+    "clean": "rimraf node_modules",
+    "reinstall": "npm install",
+    "build": "stencil build",
+    "dev": "sd concurrent \"stencil build --dev --watch\" \"stencil-dev-server\" ",
+    "serve": "stencil-dev-server",
+    "start": "npm run dev",
+    "test": "jest --no-cache",
+    "test.watch": "jest --watch --no-cache"
+  },
+  "dependencies": {
+    "animejs": "^3.1.0"
+  },
+  "devDependencies": {
+    "@stencil/core": "1.12.2",
+    "@stencil/dev-server": "0.0.18",
+    "@stencil/utils": "0.0.5",
+    "@types/animejs": "^3.1.0",
+    "@types/jest": "^25.2.1",
+    "jest": "^25.2.7",
+    "rimraf": "^3.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adaept/ae-validate-component.git"
+  },
+  "author": "Peter Ennis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/adaept/ae-validate-component"
+  },
+  "homepage": "https://github.com/adaept/ae-validate-component",
+  "jest": {
+    "transform": {
+      "^.+\\.(ts|tsx)$": "<rootDir>/node_modules/@stencil/core/testing/jest.preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(tsx?|jsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json",
+      "jsx"
+    ]
+  }
+}

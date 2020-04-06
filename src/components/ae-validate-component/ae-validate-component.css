@@ -1,0 +1,36 @@
+:host .outer-container .input-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+:host .outer-container .input-row .input-container {
+  padding: 0.5rem;
+  border-radius: 1rem;
+  border: 1px solid grey;
+  flex: 1;
+}
+:host .outer-container .input-row .input-container input {
+  outline: none !important;
+  border: none;
+  width: 100%;
+  font-size: 0.8rem;
+}
+:host .outer-container .input-row .status {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+:host .outer-container .input-row .status img {
+  height: 20px;
+  width: 20px;
+  display: flex;
+}
+:host .outer-container .validation-error {
+  font-size: 0.8rem;
+  color: #d83134;
+}
+:host .outer-container.valid .input-row .input-container {
+  border-color: #01c44c;
+}
